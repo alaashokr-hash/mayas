@@ -260,9 +260,9 @@
     }
 
     function getAcademicStartYear(today = new Date()) {
-      const year = today.getFullYear();
-      const month = today.getMonth() + 1;
-      return month >= 8 ? year : year - 1;
+      // تحديث تلقائي للعام الدراسي حسب السنة الميلادية الحالية
+      // مثال: في سنة 2026 يظهر 2026-2027، وفي سنة 2027 يظهر 2027-2028
+      return today.getFullYear();
     }
 
     function buildAgeRules(startYear = getAcademicStartYear()) {
